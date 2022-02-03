@@ -20,7 +20,7 @@ const policy = Deno.env.get("PLUGIN_URL") === undefined
 
 const opts = {
   name: "crate",
-  url: (new URL("../src/", import.meta.url)).toString(),
+  url: "https://github.com/jordanreger/crate/releases/download/v0.1.3/crate.dll",
   policy: policy,
 }
 const _lib = await prepare(opts, {
