@@ -15,7 +15,7 @@ function decode(v: any): Uint8Array {
 }
 const opts = {
   name: "crate",
-  url: (new URL("../target/debug", import.meta.url)).toString(),
+  url: (new URL("../", import.meta.url)).toString(),
   policy: CachePolicy.NONE,
 }
 const _lib = await prepare(opts, {
