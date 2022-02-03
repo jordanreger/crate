@@ -20,7 +20,7 @@ const policy = Deno.env.get("PLUGIN_URL") === undefined
 
 const opts = {
   name: "crate",
-  url: (new URL("./src/", import.meta.url)).toString(),
+  url: (new URL("../src/", import.meta.url)).toString(),
   policy: policy,
 }
 const _lib = await prepare(opts, {
