@@ -13,10 +13,15 @@ function decode(v: any): Uint8Array {
   ptr.copyInto(buf, 4)
   return buf
 }
+
+const policy = Deno.env.get("PLUGIN_URL") === undefined
+  ? CachePolicy.STORE
+  : CachePolicy.NONE;
+
 const opts = {
   name: "crate",
   url: (new URL("./", import.meta.url)).toString(),
-  policy: undefined,
+  policy: policy,
 }
 const _lib = await prepare(opts, {
   make_crate: {
