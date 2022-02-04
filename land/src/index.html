@@ -30,22 +30,6 @@
     <link rel="preload" as="image" href="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
 
     <style>
-      @media screen and (max-width: 600px) {
-        :root {
-          --size-title: 10vmin;
-          --size-text: 7.5vmin;
-          --size-subtext: 4.5vmin;
-        }
-      }
-
-      @media screen and (min-width: 600px) {
-        :root {
-          --size-title: 6vmin;
-          --size-text: 4vmin;
-          --size-subtext: 2vmin;
-        }
-      }
-
       :root {
         --syntax-keyword: #694e2b;
         --syntax-function: #9c7748;
@@ -79,20 +63,15 @@
         height: fit-content;
       }
 
-      div {
-        width: fit-content;
-      }
-
       .subtitle {
         font-family: Helvetica;
-        font-size: var(--size-text);
+        font-size: 2rem;
         font-weight: bold;
         color: #000;
       }
 
       .body {
         font-family: Arial;
-        font-size: var(--size-subtext);
         color: #212121;
       }
 
@@ -104,7 +83,6 @@
       .accent {
         color: #ffcf96;
         font-weight: bold;
-        font-size: var(--size-subtext);
       }
 
       a {
@@ -121,7 +99,6 @@
       pre, code {
         background-color: #b4b4b4;
         color: #212121;
-        font-size: var(--size-subtext);
         border-radius: 5px;
         padding: 0.45vmin;
         font-family: monospace;
