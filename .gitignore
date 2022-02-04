@@ -1,5 +1,4 @@
 target
 Cargo.lock
 Cargo.toml
-index.html
 main.ts

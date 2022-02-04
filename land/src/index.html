@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no"
+    />
+
+    <!-- for a better SEO score; lighthouse please love me back -->
+
+    <title>crateland</title>
+    <meta name="title" content="crateland">
+    <meta name="description" content="native apps with deno!">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crate.land/">
+    <meta property="og:title" content="crateland">
+    <meta property="og:description" content="native apps with deno!">
+    <meta property="og:image" content="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crate.land/">
+    <meta property="twitter:title" content="crateland">
+    <meta property="twitter:description" content="native apps with deno!">
+    <meta property="twitter:image" content="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
+
+    <!-- hopefully that worked -->
+
+    <link rel="shortcut icon" href="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" />
+    <link rel="preload" as="image" href="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
+
+    <style>
+      @media screen and (max-width: 600px) {
+        :root {
+          --size-title: 10vmin;
+          --size-text: 7.5vmin;
+          --size-subtext: 4.5vmin;
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        :root {
+          --size-title: 6vmin;
+          --size-text: 4vmin;
+          --size-subtext: 2vmin;
+        }
+      }
+
+      :root {
+        --syntax-keyword: #694e2b;
+        --syntax-function: #9c7748;
+        --syntax-variable: #7d4619;
+      }
+
+      ::-moz-selection {
+        color: #000;
+        background: #ffcf96;
+      }
+      ::selection {
+        color: #000;
+        background: #ffcf96;
+      }
+
+      img {
+        user-select: none;
+      }
+
+      html {
+        background: #c4c4c4;
+      }
+
+      #airframe {
+        position: absolute;
+        padding-bottom: 5vmin;
+        left: 5vmin;
+        top: 5vmin;
+        width: calc(100% - 10vmin);
+        height: fit-content;
+      }
+
+      div {
+        width: fit-content;
+      }
+
+      .subtitle {
+        font-family: Helvetica;
+        font-size: var(--size-text);
+        font-weight: bold;
+        color: #000;
+      }
+
+      .body {
+        font-family: Arial;
+        font-size: var(--size-subtext);
+        color: #212121;
+      }
+
+      .outbound {
+        text-decoration: underline;
+        color: #000;
+      }
+
+      .accent {
+        color: #ffcf96;
+        font-weight: bold;
+        font-size: var(--size-subtext);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #ffcf96;
+        text-shadow: 1px 1px 0 #000;
+        cursor: pointer;
+      }
+
+      pre, code {
+        background-color: #b4b4b4;
+        color: #212121;
+        font-size: calc(var(--size-subtext) - 0.25vmin);
+        border-radius: 5px;
+        padding: 0.45vmin;
+        font-family: monospace;
+        width: max-content;
+      }
+
+      .keyword {
+        color: var(--syntax-keyword);
+      }
+
+      .function {
+        color: var(--syntax-function);
+      }
+
+      .variable {
+        color: var(--syntax-variable);
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="airframe">
+      <header>
+        <img src="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="50" style="float: left"/>
+        <div class="subtitle" style="float: right">crateland</div>
+        <div style="clear:both"></div>
+      </header>
+      <br/>
+      <br/>
+      <div class="subtitle">readme</div>
+      <br/>
+      <div class="body">
+        crateland is built upon the <a href="https://github.com/jordanreger/crate" class="outbound">crate</a> package for <a href="https://deno.land" class="outbound">deno</a>.
+        <br/>
+        below is a basic example of crate at work.
+        <br/>
+        <br/>
+        <b>main.ts</b>
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+<span class="keyword">import</span> { Crate, file } <span class="keyword">from</span> <span class="variable">"https://deno.land/x/crate/mod.ts"</span>;
+
+<span class="keyword">let</span> crate = <span class="keyword">new</span> Crate();
+crate.<span class="variable">title</span> = <span class="variable">"Crate"</span>;
+crate.<span class="variable">url</span> = await <span class="function">file</span>(<span class="variable">"index.html"</span>);
+crate.<span class="variable">width</span> = <span class="variable">720</span>, crate.height = <span class="variable">480</span>;
+crate.<span class="function">run</span>();</pre>
+        <br/>
+        <b>index.html</b>
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+&lt;<span class="keyword">html</span>&gt;
+  &lt;<span class="keyword">main</span>&gt;hello from index.html!&lt;/<span class="keyword">main</span>&gt;
+&lt;/<span class="keyword">html</span>&gt;</pre>
+        <br/>
+        finally, run <code>deno run -A --unstable main.ts</code>
+        <br/>
+        <br/>
+        or, if you want <i><b>only</b></i> the necessary flags —
+        <br/>
+        <br/>
+        <code>deno run --unstable --allow-env --allow-read --allow-ffi crate.ts</code>
+        <br/>
+        <br/>
+      </div>
+      <br/>
+      <br/>
+      <div class="subtitle">future</div>
+      <br/>
+      <div class="body">
+        crateland will be a single exectuable that is customizable through a single html file — the title, icon, and content can all be modified through <code>index.html</code>. as of now, it will be deliverable on windows only. thanks to <a href="https://deno.land/manual/tools/compiler" class="outbound">deno compile</a> and <a href="https://github.com/jordanreger/crate" class="outbound">crate</a>, deno-based graphical applications are now possible.
+        <br/>
+        <br/>
+        check out the <a href="https://jordanreger.itch.io/crate" class="outbound">demo</a>!
+        <br/>
+        <br/>
+        the executable + <code>index.html</code> zipped are ~23mb, which is due to deno compile. hopefully in the future this size will get smaller.
+      </div>
+      <br/>
+      <br/>
+      <div class="subtitle">dev</div>
+      <br/>
+      <div class="body">
+        built with ♡, <a href="https://deno.land" class="outbound">deno</a> (special thanks to <a href="https://github.com/denoland/deno_bindgen" class="outbound">deno_bindgen</a>), and <a href="https://rust-lang.org" class="outbound">rust</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
+      </div>
+      <br/>
+      <br/>
+    </div>
+  </body>
+</html>
