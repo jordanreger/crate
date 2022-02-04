@@ -32,7 +32,7 @@
   </html>
   ```
   
-  seriously, that's it! run the command below in your terminal, and a window will appear —
+  yes, that's it! run the command below in your terminal, and a window will appear —
   
   ```sh
   deno run -A --unstable main.ts
