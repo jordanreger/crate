@@ -21,6 +21,10 @@ async function handler(req: Request): Promise<any> {
       tr = false, rb = "https://siasky.net/XAAyFP8gQv9FBH0iQEvPNktipJl8Xw32n2fR4raLvruOyA";
       break;
 
+    case '/compile':
+      tr = false, rb = "https://deno.land/x/crate/compile.ts";
+      break;
+
     default:
       tr = false, rb = `${url.protocol}//${url.host}/`;
   }
