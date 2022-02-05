@@ -130,7 +130,7 @@
       <div class="subtitle">readme</div>
       <br/>
       <div class="body">
-        crateland is built upon the <a href="https://deno.land/x/crate" class="outbound">crate</a> package for <a href="https://deno.land" class="outbound">deno</a>.
+        crateland is built upon the <a href="https://deno.land/x/crate" class="outbound">crate</a> package for <a href="https://deno.land" class="outbound">deno</a> (view the code on <a href="https://github.com/jordanreger/crate" class="outbound">github</a>).
         <br/>
         below is a basic example of crate at work.
         <br/>
@@ -151,22 +151,39 @@ crate.<span class="function">run</span>();</pre>
   &lt;<span class="keyword">main</span>&gt;hello from index.html!&lt;/<span class="keyword">main</span>&gt;
 &lt;/<span class="keyword">html</span>&gt;</pre>
         <br/>
-        finally, run <code>deno run -A --unstable main.ts</code>
+        if you're on <b>mac</b> or <b>linux</b>, run the command below in your terminal to spawn a crate —
         <br/>
         <br/>
-        or, if you want <i><b>only</b></i> the necessary flags —
+        <code>deno run -A --unstable main.ts</code>
         <br/>
         <br/>
-        <code>deno run --unstable --allow-env --allow-read --allow-ffi crate.ts</code>
+        (or, if you want <i>only</i> the necessary flags —
+        <br/>
+        <br/><code>deno run --unstable --allow-env --allow-read --allow-ffi crate.ts</code>)
         <br/>
         <br/>
+        <br/>
+        if you're on <b>windows</b>, run the below command to create a standalone executable —
+        <br/>
+        <br/>
+        <code>
+          deno run -A --unstable https://crate.land/compile main.ts
+        </code>
+        <br/>
+        <br/>
+        <img src="https://siasky.net/AAB26NI3POsUJX3EoV9NJaHb_sSHR3m7SJJoeIiaFjqZSQ" alt="crateland_demo" style="width: 100%" />
+        <br/>
+        <span style="color: #696969">— a demo of the above command</span>
+        <br/>
+        <br/>
+        zip it with <code>index.html</code> and distribute!
       </div>
       <br/>
       <br/>
       <div class="subtitle">future</div>
       <br/>
       <div class="body">
-        crateland will be a single exectuable that is customizable through a single html file — the title, icon, and content can all be modified through <code>index.html</code>. as of now, it will be deliverable on windows only. thanks to <a href="https://deno.land/manual/tools/compiler" class="outbound">deno compile</a> and <a href="https://github.com/jordanreger/crate" class="outbound">crate</a>, deno-based graphical applications are now possible.
+        crateland will compile to linux and mac, and universally as a standalone executable. it will be customizable through a single html file — the title, icon, and content will all be modified through <code>index.html</code>. as of now, it will be deliverable on windows only. thanks to <a href="https://deno.land/manual/tools/compiler" class="outbound">deno compile</a> and <a href="https:/deno.land/x/crate" class="outbound">crate</a>, deno-based graphical applications are now possible.
         <br/>
         <br/>
         check out the <a href="https://jordanreger.itch.io/crate" class="outbound">demo</a>!
@@ -179,7 +196,7 @@ crate.<span class="function">run</span>();</pre>
       <div class="subtitle">dev</div>
       <br/>
       <div class="body">
-        built with ♡, <a href="https://deno.land" class="outbound">deno</a> (special thanks to <a href="https://github.com/denoland/deno_bindgen" class="outbound">deno_bindgen</a>), and <a href="https://rust-lang.org" class="outbound">rust</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
+        built with ♡, <a href="https://deno.land" class="outbound">deno</a> (special thanks to <a href="https://github.com/denoland/deno_bindgen" class="outbound">deno_bindgen</a> + <a href="https://github.com/sunsetkookaburra" class="outbound">sunsetkookaburra</a> for this <a href="https://deno.land/x/crate/src/change_subsystem.ts" class="outbound">this code</a>), and <a href="https://rust-lang.org" class="outbound">rust</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
       </div>
       <br/>
       <br/>

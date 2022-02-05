@@ -1,3 +1,4 @@
+
 <div align="center">
   <a href="https://crate.land"><img src="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="200"></a>
   <h2>crate — <i>native apps with <a href="https://deno.land">deno</a>!</i></h2>
@@ -32,12 +33,19 @@
   </html>
   ```
 
-  yes, that's it! run the command below in your terminal, and a window will appear —
+<h3>linux/mac</h3>
+run the command below in your terminal, and a window will appear —
 
   ```sh
   deno run -A --unstable main.ts
   ```
 
+<h3>windows</h3>
+run the command below to get  <code>crate.exe</code>. Zip this with <code>index.html</code> and distribute!
+
+```sh
+deno run -A --unstable https://crate.land/compile main.ts
+```
   </p>
 </div>
 
@@ -45,7 +53,7 @@
   <h2>roadmap</h2>
 
   - [x] make basic window control and customization
-  - [ ] custom executables that can be packaged and delivered (windows only)
+  - [x] custom executables that can be packaged and delivered (windows only)
   - [ ] universal support
   - [ ] ??? — <a href="https://github.com/jordanreger/crate/issues">make an issue</a>!
 
