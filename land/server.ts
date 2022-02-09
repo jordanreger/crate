@@ -11,7 +11,7 @@ async function handler(req: Request): Promise<any> {
 
   switch(path){
     case '/':
-      if(userAgent !== "Deno"){
+      /*if(userAgent !== "Deno"){
         tr = true, ct = "text/html; charset=UTF-8";
         if(url.host !== "localhost:8000"){
           rb = await file("./land/src/index.html")
@@ -20,7 +20,9 @@ async function handler(req: Request): Promise<any> {
         }
       } else {
         tr = false, rb = "https://deno.land/x/crate/mod.ts";
-      }
+      }*/
+      tr = true, ct = "text/html; charset=UTF-8";
+      if(url.host !== "localhost:8000"){ rb = await file("./land/src/index.html") } else { rb = await file("./src/index.html") }
       break;
 
     case '/robots.txt':
@@ -28,6 +30,10 @@ async function handler(req: Request): Promise<any> {
       break;
     case '/dll':
       tr = false, rb = "https://siasky.net/XAAyFP8gQv9FBH0iQEvPNktipJl8Xw32n2fR4raLvruOyA";
+      break;
+
+    case '/mod':
+      tr = false, rb = "https://deno.land/x/crate/mod.ts";
       break;
 
     case '/compile':
