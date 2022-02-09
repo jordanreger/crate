@@ -16,7 +16,7 @@
   <code>main.ts</code>
 
   ```ts
-  import { Crate, file } from "https://deno.land/x/crate/mod.ts";
+  import { Crate, file } from "https://crate.land";
 
   let crate = new Crate();
   crate.title = "Crate";

@@ -2,6 +2,7 @@ import { serve } from "https://deno.land/std/http/server.ts";
 
 async function handler(req: Request): Promise<any> {
   let url = new URL(req.url);
+  let headers = new Headers(req.headers), userAgent = await headers.get("user-agent")!.split("/")[0];
   let path = url.pathname, params = new URLSearchParams(url.search);
   const route = (route:string) => { let regexRoute = new RegExp(route, "gmi"); if(regexRoute.test(path)){ return path } else { return null }}
   const file = async (fp:string) => { let d = new TextDecoder("utf-8"); return d.decode(await Deno.readFile(fp))}
@@ -10,8 +11,16 @@ async function handler(req: Request): Promise<any> {
 
   switch(path){
     case '/':
-      tr = true, ct = "text/html; charset=UTF-8";
-      if(url.host !== "localhost:8000"){rb = await file("./land/src/index.html")}else{rb = await file("./src/index.html")};
+      if(userAgent !== "Deno"){
+        tr = true, ct = "text/html; charset=UTF-8";
+        if(url.host !== "localhost:8000"){
+          rb = await file("./land/src/index.html")
+        } else {
+          rb = await file("./src/index.html")
+        }
+      } else {
+        tr = false, rb = "https://deno.land/x/crate/mod.ts";
+      }
       break;
 
     case '/robots.txt':
