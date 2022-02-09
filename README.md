@@ -16,7 +16,7 @@
   <code>main.ts</code>
 
   ```ts
-  import { Crate, file } from "https://crate.land";
+  import { Crate, file } from "https://crate.land/mod";
 
   let crate = new Crate();
   crate.title = "Crate";
