@@ -29,7 +29,7 @@ export class Crate {
   }
 
   get width(): number {
-    if (this.#width == undefined){ return 320 } else { return this.#width };
+    if (this.#width == undefined){ return 320 } else { return this.#width }
   }
 
   set height(height) {
@@ -37,7 +37,7 @@ export class Crate {
   }
 
   get height(): number {
-    if (this.#height == undefined){ return 480 } else { return this.#height };
+    if (this.#height == undefined){ return 480 } else { return this.#height }
   }
 
   async run(){
@@ -45,4 +45,4 @@ export class Crate {
   }
 }
 
-export const file = async (fp:string) => { let d = new TextDecoder("utf-8"); return d.decode(await Deno.readFile(fp))};
+export const file = async (fp:string) => { const d = new TextDecoder("utf-8"); return d.decode(await Deno.readFile(fp)) };
