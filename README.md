@@ -1,12 +1,10 @@
 
 <div align="center">
   <a href="https://crate.land"><img src="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="200"></a>
-  <h2>crate — <i>a full-stack web framework built with deno!</i></h2>
+  <h2>crate — <i>a fullstack web framework built with deno!</i></h2>
 </div>
 
 <br/>
-
-<a href="https://crate.land"><img src="https://siasky.net/fAJ-mKzuT_ixPDZ0v6Ka73VO4Urt6naVDYEE5iqESPy-jQ" alt="demo" /></a>
 
 <div>
   <h2>get started</h2>
@@ -16,53 +14,39 @@
   <code>main.ts</code>
 
   ```ts
-  import { Crate, file } from "https://crate.land/mod";
+  import Crate from "https://crate.land/mod";
 
-  let crate = new Crate();
-  crate.title = "Crate";
-  crate.url = await file("index.html");
-  crate.width = 720, crate.height = 480;
-  crate.run();
+const crate = new Crate();
+crate.serve("./src");
   ```
 
-  `index.html`
+  `./src/index.html`
 
   ```html
+  <Route="/" />
   <html>
-    <main>hello from index.html!</main>
+    <main>
+      hello from index.html!
+      <br/>
+      <Link to="https://crate.land/deno">
+        Built with Crate!
+      </Link>
+    </main>
   </html>
   ```
-
-<h3>linux/mac</h3>
-run the command below in your terminal, and a window will appear —
-
-  ```sh
-  deno run -A --unstable main.ts
-  ```
-
-<h3>windows</h3>
-run the command below to get  <code>crate.exe</code>. Zip this with <code>index.html</code> and distribute!
-
-```sh
-deno run -A --unstable https://crate.land/compile main.ts
-```
-  </p>
-</div>
 
 <div>
   <h2>roadmap</h2>
 
-  - [x] make basic window control and customization
-  - [x] custom executables that can be packaged and delivered (windows only)
-  - [ ] universal support
+  - [x] make a basic server-side rendering tool and a basic server with automatic route detection 
+  - [ ] attach a universal backend (pallet) so you can run it anywhere
   - [ ] ??? — <a href="https://github.com/jordanreger/crate/issues">make an issue</a>!
 
 </div>
 
 <div>
-  <h2>related</h2>
-
-  - <a href="https://deno.land/x/webview">deno_webview</a> — deno bindings for webview
+  <h2>where's the old crate?</h2>
+  for those of you who don't know, crate used to be a fancy webview wrapper. now, it's evolving into a fullstack web framework that will have a seamless native experience as well with an upcoming tool called "pallet." 
 
 </div>
 

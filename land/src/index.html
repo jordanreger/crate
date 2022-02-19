@@ -12,18 +12,18 @@
 
     <title>crateland</title>
     <meta name="title" content="crateland">
-    <meta name="description" content="native apps with deno!">
+    <meta name="description" content="a fullstack web framework built with deno!">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://crate.land/">
     <meta property="og:title" content="crateland">
-    <meta property="og:description" content="native apps with deno!">
+    <meta property="og:description" content="a fullstack web framework built with deno!">
     <meta property="og:image" content="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://crate.land/">
     <meta property="twitter:title" content="crateland">
-    <meta property="twitter:description" content="native apps with deno!">
+    <meta property="twitter:description" content="a fullstack web framework built with deno!">
     <meta property="twitter:image" content="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
 
     <!-- hopefully that worked -->
@@ -45,6 +45,12 @@
       ::selection {
         color: #000;
         background: #ffcf96;
+      }
+
+      hr {
+        border: none;
+        background-color: #a4a4a4;
+        height: 2px;
       }
 
       img {
@@ -132,73 +138,67 @@
       <div class="subtitle">readme</div>
       <br/>
       <div class="body">
-        crateland is built upon the <a href="https://deno.land/x/crate" class="outbound">crate</a> package for <a href="https://deno.land" class="outbound">deno</a> (view the code on <a href="https://github.com/jordanreger/crate" class="outbound">github</a>).
+        crateland is a fullstack web framework built on deno!
         <br/>
-        below is a basic example of crate at work.
+        <br/>
+        available on:
+        <br/>
+        [<a href="https://deno.land/x/crate" class="outbound">deno.land/x</a>]
+        <br/>
+        [<a href="https://github.com/jordanreger/crate" class="outbound">github</a>]
+        <br/>
+        <br/>
+        <hr>
+        <br/>
+        <h2>get started</h2>
+        all you need to do is make two files. seriously!
         <br/>
         <br/>
         <b>main.ts</b>
         <pre style="word-wrap: break-word; white-space: pre-wrap;">
-<span class="keyword">import</span> { Crate, file } <span class="keyword">from</span> <span class="variable">"https://crate.land/mod"</span>;
+<span class="keyword">import</span> Crate <span class="keyword">from</span> <span class="variable">"https://crate.land/mod"</span>;
 
 <span class="keyword">let</span> crate = <span class="keyword">new</span> Crate();
-crate.<span class="variable">title</span> = <span class="variable">"Crate"</span>;
-crate.<span class="variable">url</span> = await <span class="function">file</span>(<span class="variable">"index.html"</span>);
-crate.<span class="variable">width</span> = <span class="variable">720</span>, crate.height = <span class="variable">480</span>;
-crate.<span class="function">run</span>();</pre>
+crate.<span class="function">serve</span>(<span class="variable">"./src/index.html"</span>);</pre>
         <br/>
-        <b>index.html</b>
+        <b>./src/index.html</b>
         <pre style="word-wrap: break-word; white-space: pre-wrap;">
+&lt;<span class="keyword">Route</span>="/" /&gt;
 &lt;<span class="keyword">html</span>&gt;
-  &lt;<span class="keyword">main</span>&gt;hello from index.html!&lt;/<span class="keyword">main</span>&gt;
-&lt;/<span class="keyword">html</span>&gt;</pre>
-        <br/>
-        if you're on <b>mac</b> or <b>linux</b>, run the command below in your terminal to spawn a crate —
-        <br/>
-        <br/>
-        <code>deno run -A --unstable main.ts</code>
-        <br/>
-        <br/>
-        (or, if you want <i>only</i> the necessary flags —
-        <br/>
-        <br/><code>deno run --unstable --allow-env --allow-read --allow-ffi crate.ts</code>)
-        <br/>
-        <br/>
-        <br/>
-        if you're on <b>windows</b>, run the below command to create a standalone executable —
-        <br/>
-        <br/>
-        <code>
-          deno run -A --unstable https://crate.land/compile main.ts
-        </code>
-        <br/>
-        <br/>
-        <img src="https://siasky.net/AAB26NI3POsUJX3EoV9NJaHb_sSHR3m7SJJoeIiaFjqZSQ" alt="crateland_demo" style="width: 65%" />
-        <br/>
-        <span style="color: #696969">— a demo of the above command</span>
-        <br/>
-        <br/>
-        zip it with <code>index.html</code> and distribute!
+  &lt;<span class="keyword">main</span>&gt;
+    hello from index.html!
+    &lt;<span class="keyword">br</span>/&gt;
+    &lt;<span class="keyword">Link</span> to="https://crate.land/deno"&gt;
+      Built with Crate!
+    &lt;/<span class="keyword">Link</span>&gt;
+  &lt;/<span class="keyword">main</span>&gt;
+&lt;/<span class="keyword">html</span>&gt;
+</pre>
       </div>
       <br/>
       <br/>
-      <div class="subtitle">future</div>
+      <div class="subtitle">roadmap</div>
       <br/>
-      <div class="body">
-        crateland will compile to linux and mac, and universally as a standalone executable. it will be customizable through a single html file — the title, icon, and content will all be modified through <code>index.html</code>. as of now, it will be deliverable on windows only. thanks to <a href="https://deno.land/manual/tools/compiler" class="outbound">deno compile</a> and <a href="https:/deno.land/x/crate" class="outbound">crate</a>, deno-based graphical applications are now possible.
+      <div>
+        - [x] make a basic server-side rendering tool and a basic server with automatic route detection
         <br/>
+        - [ ] attach a universal backend (pallet) so you can run it anywhere
         <br/>
-        check out the <a href="https://jordanreger.itch.io/crate" class="outbound">demo</a>!
-        <br/>
-        <br/>
-        the executable + <code>index.html</code> zipped are ~23mb, which is due to deno compile. hopefully in the future this size will get smaller.
+        - [ ] ??? — <a href="https://github.com/jordanreger/crate/issues">make an issue</a>!
+      </div>
+      <br/>
+      <br/>
+      <div class="subtitle">where's the old crate?</div>
+      <br/>
+      <div>
+        for those of you who don't know, crate used to be a fancy webview wrapper. now, it's evolving into a fullstack web framework that will have a seamless native experience as well with an upcoming tool called "pallet." 
       </div>
       <br/>
       <br/>
       <div class="subtitle">dev</div>
       <br/>
       <div class="body">
-        built with ♡, <a href="https://deno.land" class="outbound">deno</a> (special thanks to <a href="https://github.com/denoland/deno_bindgen" class="outbound">deno_bindgen</a> + <a href="https://github.com/sunsetkookaburra" class="outbound">sunsetkookaburra</a> for this <a href="https://deno.land/x/crate/src/change_subsystem.ts" class="outbound">this code</a>), and <a href="https://rust-lang.org" class="outbound">rust</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
+        built with ♡ and <a href="https://deno.land" class="outbound">deno</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
       </div>
       <br/>
       <br/>
