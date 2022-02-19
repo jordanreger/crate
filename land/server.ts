@@ -4,8 +4,8 @@ import { ssr, route } from "../utils.ts";
 const paths = new Map(), decoder = new TextDecoder("utf-8"), file = async (file_path:string) => { return decoder.decode(await Deno.readFile(file_path))};
 
 async function readPaths(directory: string){
-  for await (const item of Deno.readDir(directory)) {
-    const file_path = `${directory}/${item.name}`;
+  for await (const item of Deno.readDir(`./land/${directory}`)) {
+    const file_path = `./land/${directory}/${item.name}`;
     const path = route(await file(file_path));
     paths.set(path, file_path);
   }
