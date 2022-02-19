@@ -1,7 +1,7 @@
 
 <div align="center">
   <a href="https://crate.land"><img src="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="200"></a>
-  <h2>crate — <i>native apps with <a href="https://deno.land">deno</a>!</i></h2>
+  <h2>crate — <i>a full-stack web framework built with deno!</i></h2>
 </div>
 
 <br/>

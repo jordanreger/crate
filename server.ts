@@ -1,5 +1,5 @@
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
-import { ssr, route } from "../utils.ts";
+import { ssr, route } from "./utils.ts";
 
 const paths = new Map(), decoder = new TextDecoder("utf-8"), file = async (file_path:string) => { return decoder.decode(await Deno.readFile(file_path))};
 
@@ -18,15 +18,7 @@ async function handler(req: Request): Promise<Response> {
   const file_path = paths.get(path);
   let response;
   if (!file_path) {
-    if(path === "/mod") {
-      response = Response.redirect("https://deno.land/x/crate/mod.ts", 302);
-    } else if(path === "/deno") {
-      response = Response.redirect("https://deno.land/x/crate", 302);
-    }  else if(path === "/github") {
-      response = Response.redirect("https://github.com/jordanreger/crate", 302);
-    } else {
-      response = new Response("not found");
-    }
+    response = new Response("not found");
   } else {
     response = new Response(ssr(await file(file_path)), {
       headers: { "content-type": "text/html; charset=UTF-8" },
