@@ -1,4 +1,4 @@
-/* Crate —— v1.0 */
+/* Crate —— v0.2 */
 
 import serveCrate from "./server.ts";
 import { ssr, route } from "./utils.ts";
