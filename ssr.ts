@@ -1,12 +1,3 @@
-const route = (src: string) => {
-    const RouteTags = src.match(/<Route=(.*?)\s+\/>/gmis) || [];
-    const route = RouteTags[0].replace(/<Route=(.*?)\s+\/>/gmis, (_, path) => {
-            path = path.replaceAll(`"`, "");
-            return path
-    });
-    return route
-}
-
 const ssr = /* async */ (file: string) => {
     let src = file;
 
@@ -34,4 +25,4 @@ const ssr = /* async */ (file: string) => {
     return src;
 }
 
-export { ssr, route };
+export { ssr };

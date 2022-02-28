@@ -1,19 +1,11 @@
-/* Crate —— v0.2 */
+/* Crate —— v0.3 */
 
 import serveCrate from "./server.ts";
-import { ssr, route } from "./utils.ts";
 
 export default class Crate {
-
-    serve(directory: string) {
-        serveCrate(directory);
+    serve(src: Record<string, unknown>) {
+        serveCrate(src);
     }
 
-    route(src: string) {
-        route(src);
-    }
-
-    ssr(file: string){
-        ssr(file);
-    }
+    /* more functions soon! */
 }
