@@ -1,7 +1,6 @@
 /* Crate —— v0.22 */
 
 import serveCrate from "./server.ts";
-import { make_crate } from "./rust/bindings/bindings.ts";
 
 type Obj = {
     native?: boolean,
@@ -16,7 +15,9 @@ export default class Crate {
     serve(src: Obj) {
         serveCrate(src);
         if(src.native) {
-            make_crate(src.title!, src.width!, src.height!);
+            import("./rust/bindings/bindings.ts").then((crate) => {
+                crate.make_crate(src.title!, src.width!, src.height!)
+            });
         }
     }
 }
