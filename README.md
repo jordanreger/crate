@@ -68,7 +68,8 @@ crate.serve(App);
 - ??? — <a href="https://github.com/jordanreger/crate/issues" class="outbound">make an issue</a>!
 
 </div>
-<br/>20%img alt="Deno release" src="https://shield.deno.dev/x/crate"></a> <a href="/github"><img alt="GitHub license" src="https://img.shields.io/github/license/jordanreger/crate"></a>
+<br/>
+<img alt="Deno release" src="https://shield.deno.dev/x/crate"></a> <a href="/github"><img alt="GitHub license" src="https://img.shields.io/github/license/jordanreger/crate"></a>
 <br/>
 built with ♡ and <a href="https://deno.land" class="outbound">deno</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
 </div>
