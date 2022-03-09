@@ -1,6 +1,6 @@
 <div id="airframe">
 <header>
-<img src="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="50" align="left"/>
+<img src="https://fileportal.org/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="50" align="left"/>
 <br/>
 <h1 align="right">crate</h1>
 <div class="body">
@@ -24,16 +24,20 @@ all you need to do is make two files. seriously!
 
 ```ts
 const App = {
+  native: true,
+  title: "crate",
+  width: 720,
+  height: 480,
   directory: "./src",
   routes: {
     "/": "./index.html",
     "/redirect": "https://crate.land"
   }
 }
-
+  
 import Crate from "https://crate.land/mod";
-
-let crate = new Crate();
+  
+const crate = new Crate();
 crate.serve(App);
 ```
 
@@ -60,19 +64,11 @@ crate.serve(App);
 <div class="body">
 
 - [x] make a basic server-side rendering tool and an automatic server
-- [ ] attach a universal backend (pallet) so you can run it anywhere
-- [ ] ??? — <a href="https://github.com/jordanreger/crate/issues" class="outbound">make an issue</a>!
+- [x] attach a universal backend (pallet) so you can run it anywhere
+- ??? — <a href="https://github.com/jordanreger/crate/issues" class="outbound">make an issue</a>!
 
 </div>
-<br/>
-<h2>where's the old crate?</h2>
-<div class="body">
-for those of you who don't know, crate used to be a fancy webview wrapper. now, it's evolving into a fullstack web framework that will have a seamless native experience as well with an upcoming tool called "pallet." 
-</div>
-<br/>
-<h2>dev</h2>
-<div class="body">
-<a href="/deno"><img alt="Deno release" src="https://shield.deno.dev/x/crate"></a> <a href="/github"><img alt="GitHub license" src="https://img.shields.io/github/license/jordanreger/crate"></a>
+<br/>20%img alt="Deno release" src="https://shield.deno.dev/x/crate"></a> <a href="/github"><img alt="GitHub license" src="https://img.shields.io/github/license/jordanreger/crate"></a>
 <br/>
 built with ♡ and <a href="https://deno.land" class="outbound">deno</a> by <a href="https://jordanreger.com" class="outbound">jordan reger</a>.
 </div>

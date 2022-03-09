@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
 import { ssr } from "./ssr.ts";
 import { Router } from "./routes.ts";
 
-export default async function serveCrate(src: Record<string, unknown>){
+export default function serveCrate(src: Record<string, unknown>){
   const paths = Router(src);
 
   async function handler(req: Request): Promise<Response> {
@@ -31,5 +31,5 @@ export default async function serveCrate(src: Record<string, unknown>){
     return response;
   }
 
-  await serve(handler);
+  serve(handler);
 }

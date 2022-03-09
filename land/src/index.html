@@ -1,5 +1,3 @@
-<Route="/" />
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,18 +16,18 @@
     <meta property="og:url" content="https://crate.land/">
     <meta property="og:title" content="crateland">
     <meta property="og:description" content="a fullstack web framework built with deno!">
-    <meta property="og:image" content="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
+    <meta property="og:image" content="https://fileportal.org/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://crate.land/">
     <meta property="twitter:title" content="crateland">
     <meta property="twitter:description" content="a fullstack web framework built with deno!">
-    <meta property="twitter:image" content="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
+    <meta property="twitter:image" content="https://fileportal.org/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
 
     <!-- hopefully that worked -->
 
-    <link rel="shortcut icon" href="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" />
-    <link rel="preload" as="image" href="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
+    <link rel="shortcut icon" href="https://fileportal.org/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" />
+    <link rel="preload" as="image" href="https://fileportal.org/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig">
 
     <style>
       :root {
@@ -99,8 +97,7 @@
       }
 
       a:hover {
-        color: #ffcf96;
-        text-shadow: 1px 1px 0 #000;
+        color: #424242;
         cursor: pointer;
       }
 
@@ -123,13 +120,89 @@
       .variable {
         color: var(--syntax-variable);
       }
+
+      body .gist .gist-data::selection {
+        color: #ffcf96;
+        background-color: #212121;
+      }
+
+      body .gist .gist-file {
+        border: 1px solid #424242;
+      }
+
+      body .gist .gist-meta {
+        background-color: #a4a4a4;
+        color: #212121;
+      }
+
+      body .gist .gist-meta a {
+        color: #101010;
+      }
+
+      body .gist .highlight {
+          background: #b4b4b4;
+      }
+      body .gist .blob-num,
+      body .gist .blob-code-inner,
+      body .gist .pl-st {
+          color: #212121;
+      }
+      body .gist .pl-c,
+      body .gist .pl-c span {
+          color: #212121;
+          font-style: italic;
+      }
+      body .gist .pl-mb {
+          color: var(--syntax-variable);
+          font-weight: 700;
+      }
+      body .gist .pl-mh .pl-en {
+          color: var(--syntax-variable);
+          font-weight: 700;
+      }
+      body .gist .pl-mi {
+          color: var(--syntax-keyword);
+          font-style: italic;
+      }
+      body .gist .pl-c1,
+      body .gist .pl-mh,
+      body .gist .pl-sr .pl-cce {
+          color: var(--syntax-keyword);
+      }
+      body .gist .pl-e,
+      body .gist .pl-en,
+      body .gist .pl-ent,
+      body .gist .pl-s,
+      body .gist .pl-v,
+      body .gist .pl-vpf {
+          color: #974;
+      }
+      body .gist .pl-k,
+      body .gist .pl-mdh,
+      body .gist .pl-mdr,
+      body .gist .pl-ml,
+      body .gist .pl-mm,
+      body .gist .pl-mo,
+      body .gist .pl-mp,
+      body .gist .pl-mr,
+      body .gist .pl-ms,
+      body .gist .pl-s1 .pl-v,
+      body .gist .pl-s3 {
+          color: var(--syntax-keyword);
+      }
+      body .gist .pl-smi,
+      body .gist .pl-smp,
+      body .gist .pl-stj,
+      body .gist .pl-vo {
+          color: var(--syntax-keyword);
+      }
     </style>
 
   </head>
   <body>
     <div id="airframe">
       <header>
-        <img src="https://siasky.net/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="50" style="float: left"/>
+        <img src="https://fileportal.org/CAD7j5WQJXvVyfBOOA0QSecHVrbeKrqoXOVpnN3vf03Uig" alt="crate" width="50" style="float: left"/>
         <div class="subtitle" style="float: right">crate</div>
         <div style="clear:both"></div>
       </header>
@@ -155,32 +228,10 @@
         <br/>
         <br/>
         <b>main.ts</b>
-        <pre style="word-wrap: break-word; white-space: pre-wrap;">
-<span class="keyword">const</span> <span class="variable">App</span> = {
-  directory: <span class="variable">"./src"</span>,
-  routes: {
-    <span class="variable">"/"</span>: <span class="variable">"./index.html"</span>,
-    <span class="variable">"/redirect"</span>: <span class="variable">"https://crate.land"</span>
-  }
-}
-
-<span class="keyword">import</span> Crate <span class="keyword">from</span> <span class="variable">"https://crate.land/mod"</span>;
-
-<span class="keyword">let</span> crate = <span class="keyword">new</span> Crate();
-crate.<span class="function">serve</span>(<span class="variable">App</span>);</pre>
+        <script src="https://gist.github.com/jordanreger/9d40f1035c1efb2c5e512f4062df4cb5.js"></script>
         <br/>
         <b>./src/index.html</b>
-        <pre style="word-wrap: break-word; white-space: pre-wrap;">
-&lt;<span class="keyword">html</span>&gt;
-  &lt;<span class="keyword">main</span>&gt;
-    hello from index.html!
-    &lt;<span class="keyword">br</span>/&gt;
-    &lt;<span class="keyword">Link</span> to="https://crate.land/deno"&gt;
-      Built with Crate!
-    &lt;/<span class="keyword">Link</span>&gt;
-  &lt;/<span class="keyword">main</span>&gt;
-&lt;/<span class="keyword">html</span>&gt;
-</pre>
+        <script src="https://gist.github.com/jordanreger/e7692d0fcaac00886008b837d1822be8.js"></script>
       </div>
       <br/>
       <br/>
@@ -189,16 +240,9 @@ crate.<span class="function">serve</span>(<span class="variable">App</span>);</p
       <div class="body">
         - [x] make a basic server-side rendering tool and an automatic server
         <br/>
-        - [ ] attach a universal backend (pallet) so you can run it anywhere
+        - [x] attach a universal backend (pallet) so you can run it anywhere
         <br/>
-        - [ ] ??? — <a href="https://github.com/jordanreger/crate/issues" class="outbound">make an issue</a>!
-      </div>
-      <br/>
-      <br/>
-      <div class="subtitle">where's the old crate?</div>
-      <br/>
-      <div class="body">
-        for those of you who don't know, crate used to be a fancy webview wrapper. now, it's evolving into a fullstack web framework that will have a seamless native experience as well with an upcoming tool called "pallet." 
+        - ??? — <a href="https://github.com/jordanreger/crate/issues" class="outbound">make an issue</a>!
       </div>
       <br/>
       <br/>

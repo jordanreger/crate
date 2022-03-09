@@ -1,0 +1,13 @@
+[package]
+name = "crate"
+version = "0.3.0"
+edition = "2021"
+
+[lib]
+name = "crate"
+crate-type = ["cdylib"]
+
+[dependencies]
+deno_bindgen = "0.4.1"
+serde = { version = "1", features = ["derive"] }
+web-view = { version = "0.7" }
