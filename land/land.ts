@@ -1,7 +1,6 @@
 const App = {
-    directory: "./land/src",
     routes: {
-        "/": "./index.html",
+        "/": "./land/src/index.html",
         "/mod": "https://deno.land/x/crate/mod.ts",
         "/deno": "https://deno.land/x/crate",
         "/github": "https://github.com/jordanreger/crate"

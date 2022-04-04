@@ -7,7 +7,7 @@ type Obj = {
     title?: string,
     width?: number,
     height?: number,
-    directory: string,
+    directory?: string,
     routes: Record<string, unknown>
 }
 
