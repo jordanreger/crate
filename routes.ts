@@ -8,7 +8,6 @@ export const Router = (src: Record<string, unknown>) => {
     // Convert object to map
     for(let i = 0; i < length; i++){
         const path = String(routes[i]), routedPath = String(src[path]).replace("./", "");
-
         map.set(path, routedPath);
     }
 
