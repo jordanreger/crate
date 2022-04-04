@@ -1,3 +1,9 @@
+/*
+
+CUSTOM TAGS ARE TEMPORARILY DISABLED
+
+*/
+
 const ssr = /* async */ (file: string) => {
     let src = file;
 
