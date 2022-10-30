@@ -70,6 +70,10 @@ export default function serveCrate(src: Record<string, unknown>){
             contentType = "application/json";
           }
 
+          else if (fileType === "css") {
+            contentType = "text/css";
+          }
+
           else {
             content = "not found";
             contentType = "text/plain";
