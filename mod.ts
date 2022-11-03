@@ -1,4 +1,4 @@
-/* Crate —— v1.0 */
+/* Crate v1.2.2 */
 
 import serveCrate from "./server.ts";
 
