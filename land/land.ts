@@ -10,7 +10,7 @@ const App = {
 
         "/index.css": `${root}/static/index.css`,
         "/logo.svg": `${root}/static/logo.svg`,
-        "/mod.ts": "https://deno.land/x/crate@v1.2.2/mod.ts",
+        "/mod.ts": "https://deno.land/x/crate@v1.2.3/mod.ts",
         "/deno": "https://deno.land/x/crate",
         "/github": "https://github.com/jordanreger/crate"
     }
