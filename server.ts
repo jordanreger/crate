@@ -57,6 +57,38 @@ export default function serveCrate(src: Record<string, unknown>){
           else if (fileType === "svg") {
             contentType = "image/svg+xml";
           }
+			
+		else if (fileType === "webp") {
+			contentType = "image/webp";
+		}
+
+		else if (fileType === "webm") {
+			contentType = "video/webm";
+		}
+
+		else if (fileType === "weba") {
+			contentType = "audio/webm";
+		}
+
+		else if (fileType === "png") {
+			contentType = "image/png";
+		}
+
+		else if (fileType === "jpg" || fileType === "jpeg") {
+			contentType = "image/jpeg";
+		}
+
+		else if (fileType === "mp4") {
+			contentType = "video/mp4";
+		}
+
+		else if (fileType === "mp3") {
+			contentType = "audio/mpeg";
+		}
+
+		else if (fileType === "mpeg") {
+			contentType = "video/mpeg";
+		}
 
           else if (fileType === "ts" || fileType === "js" || fileType === "mjs" || fileType === "mts") {
             contentType = "text/javascript";
