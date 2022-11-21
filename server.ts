@@ -94,10 +94,6 @@ export default function serveCrate(src: Record<string, unknown>){
             contentType = "application/xml";
           }
 
-          else if (fileType === "mp3") {
-            contentType = "audio/mpeg";
-          }
-
           else if (fileType === "mpeg") {
             contentType = "video/mpeg";
           }
@@ -116,6 +112,18 @@ export default function serveCrate(src: Record<string, unknown>){
 
           else if (fileType === "css") {
             contentType = "text/css";
+          }
+
+          else if (fileType === "ttf") {
+            contentType = "application/x-font-truetype";
+          }
+
+          else if (fileType === "woff") {
+            contentType = "application/font-woff";
+          }
+
+          else if (fileType === "otf") {
+            contentType = "application/x-font-opentype";
           }
 
           else {
