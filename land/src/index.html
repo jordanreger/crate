@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
+
+  <title>crate</title>
+  <meta name="title" content="crate">
+  <meta name="description" content="a fullstack web framework built on deno!">
+
+  <link rel="shortcut icon" href="/logo.svg" />
+  <link rel="preload" as="image" href="/logo.svg">
+
+  <link rel="stylesheet" href="https://jordanreger.com/resources/index.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <pre class="title">
+               __     
+ ___________ _/ /____ 
+/ __/ __/ _ `/ __/ -_)
+\__/_/  \_,_/\__/\__/</pre>
+    </header>
+    <article>
+      <div class="subtitle">README</div>
+      <div class="body">
+        crate is a fullstack web framework built on deno!
+        <br />
+        <br />
+        [<a href="https://deno.land/x/crate">deno.land/x</a>] [<a href="https://github.com/jordanreger/crate">github</a>]
+      </div>
+    </article>
+    <hr />
+    <article>
+      <div class="subtitle">getting started</div>
+      <div class="body">
+        the below code will spawn a basic web server.
+        <br/>
+        <br/>
+        <b>main.ts</b>
+        <pre>
+const App = {
+  directory: "./src",
+  routes: {
+    "/": "./index.html",
+    "/redirect": "https://crate.land"
+  }
+}
+            
+import Crate from "https://crate.land/mod.ts";
+  
+const crate = new Crate();
+crate.serve(App);</pre>
+        <br/>
+        <b>./src/index.html</b>
+        <pre>&lt;html&gt;
+  &lt;main&gt;
+    hello from index.html!
+  &lt;/main&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </article>
+    <article>
+      <div class="subtitle">dev</div>
+      <div class="body">
+        <a href="/deno"><img alt="Deno release" src="https://shield.deno.dev/x/crate"></a> <a href="/github"><img alt="GitHub license" src="https://img.shields.io/github/license/jordanreger/crate"></a>
+        <br/>
+        <br/>
+        built with ♡ and <a href="https://deno.land">deno</a> by <a href="https://jordanreger.com">jordan reger</a>.
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>
